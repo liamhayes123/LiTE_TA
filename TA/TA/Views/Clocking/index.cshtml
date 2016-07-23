@@ -1,20 +1,23 @@
 ﻿
 @{
-    ViewBag.Title = "Actions";
+    ViewBag.Title = "Clock In";
 }
 
 <h2>Actions</h2>
 
-<button type="button" class="btn btn-primary btn-block">
+<button id="Start" type="button" class="btn btn-primary btn-block">
     <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> Morning
 </button>
-<button type="button" class="btn btn-default btn-block">
+<button id="LunchStart" type="button" class="btn btn-default btn-block">
     <span class="glyphicon glyphicon-ice-lolly" aria-hidden="true"></span> Lunch
 </button>
-<button type="button" class="btn btn-default btn-block">
+<button id="LunchEnd" type="button" class="btn btn-default btn-block">
     <span class="glyphicon glyphicon-ice-lolly-tasted" aria-hidden="true"></span> Back From Lunch
 </button>
-<button type="button" class="btn btn-default btn-block">
+<button id="End" type="button" class="btn btn-default btn-block">
     <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
 </button>
 
+@section Scripts {
+    @Scripts.Render("~/Scripts/clocking.js")
+}
