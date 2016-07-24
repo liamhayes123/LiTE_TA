@@ -25,7 +25,11 @@ namespace TA
 
             bundles.Add(new ScriptBundle("~/bundles/TA").Include(
                 "~/Scripts/site.js",
+                "~/Scripts/users.js",
                 "~/Scripts/clocking.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/Plugins").Include(
+                "~/Scripts/Plugins/jquery.bootgrid.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
