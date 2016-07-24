@@ -2,14 +2,18 @@
 @{
     ViewBag.Title = "index";
 }
-
-<table id="Users" class="table table-condensed table-hover table-striped">
+<br />
+<table id="Users" class="table table-condensed table-hover table-striped" data-navigation="0">
     <thead>
         <tr>
-            <th data-column-id="id" data-type="numeric" data-identifier="true">ID</th>
-            <th data-column-id="sender">Sender</th>
-            <th data-column-id="received" data-order="desc">Received</th>
-            <th data-column-id="link" data-formatter="link" data-sortable="false">Link</th>
+            <th data-column-id="Id" data-formatter="edit"></th>
+            <th data-column-id="UserName">User Name</th>
+            <th data-column-id="Role">Role</th>
         </tr>
     </thead>
 </table>
+@Html.Partial("_EditUser")
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/users.js")
+}

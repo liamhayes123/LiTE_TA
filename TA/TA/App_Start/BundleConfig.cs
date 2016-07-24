@@ -25,7 +25,6 @@ namespace TA
 
             bundles.Add(new ScriptBundle("~/bundles/TA").Include(
                 "~/Scripts/site.js",
-                "~/Scripts/users.js",
                 "~/Scripts/clocking.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/Plugins").Include(
@@ -33,6 +32,7 @@ namespace TA
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/font-awesome.css",
                       "~/Content/site.css"));
         }
     }

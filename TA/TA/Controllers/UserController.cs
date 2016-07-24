@@ -14,16 +14,16 @@ namespace TA.Controllers
         // GET: User
         public ActionResult Index()
         {
-            ApplicationUserManager userManager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            IQueryable<ApplicationUser> users = userManager.Users;
             return View();
         }
 
+        [HttpPost]
         public ActionResult List()
         {
             ApplicationUserManager userManager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            IQueryable<IUser> users = userManager.Users;
-            return View();
+            IQueryable<ApplicationUser> users = userManager.Users;
+            BootGrid gridData = new BootGrid(-1, users.Count(), users.ToList(), users.Count());
+            return Json(gridData);
         }
     }
 }
